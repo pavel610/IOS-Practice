@@ -19,8 +19,9 @@ class Car{
 }
 
 class BMW: Car {
-    
-    override init(brand: String, model: String, year: Int, horsepower: Int) {
+    var color: String
+    init(brand: String, model: String, year: Int, horsepower: Int, color: String) {
+        self.color = color
         super.init(brand: brand, model: model, year: year, horsepower: horsepower)
     }
 }
@@ -53,7 +54,7 @@ class Toyota: Car {
 }
 
 func createCars() -> [Car]{
-    let car1 = BMW(brand: "BMW", model: "X5", year: 2018, horsepower: 300)
+    let car1 = BMW(brand: "BMW", model: "X5", year: 2018, horsepower: 300, color: "Red")
     let car2 = Audi(brand: "Audi", model: "A4", year: 2017, horsepower: 200, topSpeed: 250)
     let car3 = Mercedes(brand: "Mercedes", model: "E-Class", year: 2019, horsepower: 230, color: "Black")
     let car4 = Toyota(brand: "Toyota", model: "Corolla", year: 2016, horsepower: 200, mileage: 50000.0)
