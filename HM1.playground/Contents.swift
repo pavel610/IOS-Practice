@@ -13,7 +13,7 @@ class Car{
         self.horsepower = horsepower
     }
     
-    func toString() -> String{
+    func toString() -> String {
         return "Марка: \(brand), Модель: \(model), Год: \(year), Мощность: \(horsepower)"
     }
 }
@@ -36,10 +36,10 @@ class Audi: Car {
 }
 
 class Mercedes: Car {
-    var color: String
+    var tires: String
     
-    init(brand: String, model: String, year: Int, horsepower: Int, color: String) {
-        self.color = color
+    init(brand: String, model: String, year: Int, horsepower: Int, tires: String) {
+        self.tires = tires
         super.init(brand: brand, model: model, year: year, horsepower: horsepower)
     }
 }
@@ -53,29 +53,29 @@ class Toyota: Car {
     }
 }
 
-func createCars() -> [Car]{
+func createCars() -> [Car] {
     let car1 = BMW(brand: "BMW", model: "X5", year: 2018, horsepower: 300, color: "Red")
     let car2 = Audi(brand: "Audi", model: "A4", year: 2017, horsepower: 200, topSpeed: 250)
-    let car3 = Mercedes(brand: "Mercedes", model: "E-Class", year: 2019, horsepower: 230, color: "Black")
+    let car3 = Mercedes(brand: "Mercedes", model: "E-Class", year: 2019, horsepower: 230, tires: "Big")
     let car4 = Toyota(brand: "Toyota", model: "Corolla", year: 2016, horsepower: 200, mileage: 50000.0)
     let car5 = Toyota(brand: "Toyota", model: "Corolla", year: 2016, horsepower: 230, mileage: 50000.0)
     let car6 = Toyota(brand: "Toyota", model: "Corolla", year: 2016, horsepower: 240, mileage: 50000.0)
     return [car1, car2, car3, car4, car5, car6]
 }
 
-func compareCars(cars: [Car]) -> Car{
+func compareCars(cars: [Car]) -> Car {
     var winner: Car = cars[0]
-    for i in 1..<cars.count{
-        if winner.horsepower < cars[i].horsepower{
+    for i in 1..<cars.count {
+        if winner.horsepower < cars[i].horsepower {
             winner = cars[i]
-        }else if winner.horsepower == cars[i].horsepower{
+        } else if winner.horsepower == cars[i].horsepower {
             winner = winner.year < cars[i].year ? cars[i] : winner
         }
     }
     return winner
 }
 
-func race(for cars: [Car]){
+func race(for cars: [Car]) {
     var cars = cars
     var current: [Car] = []
     while !cars.isEmpty{
