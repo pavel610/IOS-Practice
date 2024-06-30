@@ -93,7 +93,7 @@ func race(for cars: [Car]){
     cars = current
     current = []
     
-    print("Итоговый победитель \(compareCars(cars: cars).toString())")
+    //print("Итоговый победитель \(compareCars(cars: cars).toString())")
     
 }
 
