@@ -58,36 +58,42 @@ func createCars() -> [Car]{
     let car2 = Audi(brand: "Audi", model: "A4", year: 2017, horsepower: 200, topSpeed: 250)
     let car3 = Mercedes(brand: "Mercedes", model: "E-Class", year: 2019, horsepower: 230, color: "Black")
     let car4 = Toyota(brand: "Toyota", model: "Corolla", year: 2016, horsepower: 200, mileage: 50000.0)
-    return [car1, car2, car3, car4]
+    let car5 = Toyota(brand: "Toyota", model: "Corolla", year: 2016, horsepower: 230, mileage: 50000.0)
+    let car6 = Toyota(brand: "Toyota", model: "Corolla", year: 2016, horsepower: 240, mileage: 50000.0)
+    return [car1, car2, car3, car4, car5, car6]
 }
 
-func compareCars(car1: Car, car2: Car) -> Car{
-    if car1.horsepower == car2.horsepower {
-        return  car1.year < car2.year ? car2 : car1
+func compareCars(cars: [Car]) -> Car{
+    var winner: Car = cars[0]
+    for i in 1..<cars.count{
+        if winner.horsepower < cars[i].horsepower{
+            winner = cars[i]
+        }else if winner.horsepower == cars[i].horsepower{
+            winner = winner.year < cars[i].year ? cars[i] : winner
+        }
     }
-    return car1.horsepower < car2.horsepower ? car2 : car1
+    return winner
 }
 
 func race(for cars: [Car]){
     var cars = cars
-    for i in stride(from: 0, to: cars.count, by: 2){
-        print("Круг \(i / 2 + 1)")
-        var current: [Car] = []
-        while !cars.isEmpty{
-            let i1 = Int.random(in: 0..<cars.count)
-            let car1 = cars[i1]
-            cars.remove(at: i1)
-            let i2 = Int.random(in: 0..<cars.count)
-            let car2 = cars[i2]
-            cars.remove(at: i2)
-            print("Гонка между \(car1.toString()) и \(car2.toString())")
-            print("Победитель - \(compareCars(car1: car1, car2: car2).toString())")
-            current.append(compareCars(car1: car1, car2: car2))
-        }
-        cars = current
-        current = []
+    var current: [Car] = []
+    while !cars.isEmpty{
+        let i1 = Int.random(in: 0..<cars.count)
+        let car1 = cars[i1]
+        cars.remove(at: i1)
+        let i2 = Int.random(in: 0..<cars.count)
+        let car2 = cars[i2]
+        cars.remove(at: i2)
+        let winner = compareCars(cars: [car1, car2])
+        print("Гонка между \(car1.toString()) и \(car2.toString())")
+        print("Победитель - \(winner.toString())")
+        current.append(winner)
     }
-    print("Итоговый победитель \(cars[0].toString())")
+    cars = current
+    current = []
+    
+    print("Итоговый победитель \(compareCars(cars: cars).toString())")
     
 }
 
