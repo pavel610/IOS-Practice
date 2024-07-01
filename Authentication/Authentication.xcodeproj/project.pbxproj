@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAC1DB832C33378600961E4F /* Скринкаст in Resources */ = {isa = PBXBuildFile; fileRef = AAC1DB822C33378600961E4F /* Скринкаст */; };
 		AAEC01F22C32CB08004415F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC01F12C32CB08004415F1 /* AppDelegate.swift */; };
 		AAEC01F42C32CB08004415F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC01F32C32CB08004415F1 /* SceneDelegate.swift */; };
 		AAEC01F62C32CB08004415F1 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC01F52C32CB08004415F1 /* AuthViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAC1DB822C33378600961E4F /* Скринкаст */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Скринкаст"; sourceTree = "<group>"; };
 		AAEC01EE2C32CB08004415F1 /* Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEC01F12C32CB08004415F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEC01F32C32CB08004415F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				AAEC02052C32CB37004415F1 /* Manager */,
+				AAEC020C2C32E437004415F1 /* User.swift */,
 				AAEC01F12C32CB08004415F1 /* AppDelegate.swift */,
 				AAEC01F32C32CB08004415F1 /* SceneDelegate.swift */,
 				AAEC01F52C32CB08004415F1 /* AuthViewController.swift */,
@@ -70,8 +73,8 @@
 				AAEC01F72C32CB08004415F1 /* Main.storyboard */,
 				AAEC01FA2C32CB0A004415F1 /* Assets.xcassets */,
 				AAEC01FC2C32CB0A004415F1 /* LaunchScreen.storyboard */,
-				AAEC020C2C32E437004415F1 /* User.swift */,
 				AAEC01FF2C32CB0A004415F1 /* Info.plist */,
+				AAC1DB822C33378600961E4F /* Скринкаст */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				AAEC01FB2C32CB0A004415F1 /* Assets.xcassets in Resources */,
 				AAEC01FE2C32CB0A004415F1 /* Base in Resources */,
+				AAC1DB832C33378600961E4F /* Скринкаст in Resources */,
 				AAEC01F92C32CB08004415F1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
