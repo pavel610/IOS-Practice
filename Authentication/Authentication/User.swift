@@ -1,0 +1,19 @@
+//
+//  User.swift
+//  Authentication
+//
+//  Created by Павел Калинин on 01.07.2024.
+//
+
+import Foundation
+import UIKit
+
+struct User {
+    let login: String
+    let password: String
+    let fullName: String
+    let birthDate: String
+    let contactInfo: String
+    let bio: String
+    let avatar: UIImage
+}
