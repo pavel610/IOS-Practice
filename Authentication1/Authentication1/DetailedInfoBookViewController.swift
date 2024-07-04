@@ -14,10 +14,7 @@ class DetailedInfoBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         configure()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,29 +29,20 @@ class DetailedInfoBookViewController: UIViewController {
         summaryLabel.text = book?.summary
         if let user = user, likedBooks.isBookLiked(user: user, book: book!) {
             toLikedButton.setTitle("В избранном", for: .normal)
-
         } else {
             toLikedButton.setTitle("Добавить в избранное", for: .normal)
-
         }
     }
     
-
     @IBAction func toLikedButtonTapped(_ sender: Any) {
         guard let user = user, let book = book else { return }
         if likedBooks.isBookLiked(user: user, book: book) {
             likedBooks.removeLikedBook(user: user, book: book)
             toLikedButton.setTitle("Добавить в избранное", for: .normal)
-
         } else {
             likedBooks.addLikedBook(user: user, book: book)
             toLikedButton.setTitle("В избранном", for: .normal)
-
         }
         NotificationCenter.default.post(name: .likedBooksUpdated, object: nil)
-
     }
-    
-    
-
 }

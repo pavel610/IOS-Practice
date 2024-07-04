@@ -10,8 +10,6 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -23,7 +21,6 @@ class AuthViewController: UIViewController {
     
     @IBAction func signInButtonTapped(_ sender: Any) {
         guard let login = loginTextField.text, let password = passwordTextField.text else { return }
-                
         if let user = authManager.LogInUser(login: login, pass: password) {
             loginTextField.text = ""
             passwordTextField.text = ""
@@ -34,6 +31,5 @@ class AuthViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
-
 }
 

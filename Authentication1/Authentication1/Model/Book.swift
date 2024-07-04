@@ -24,7 +24,7 @@ struct Book: Hashable, Identifiable, Codable {
     
     func encode(to encoder: Encoder) throws {
             var container = encoder.container(keyedBy: CodingKeys.self)
-            let imageData = image.pngData() // Сериализация UIImage в Data
+            let imageData = image.pngData() 
             try container.encode(imageData, forKey: .image)
             try container.encode(name, forKey: .name)
             try container.encode(author, forKey: .author)

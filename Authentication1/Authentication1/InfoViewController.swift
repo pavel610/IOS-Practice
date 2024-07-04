@@ -9,14 +9,12 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var additionalTextLabel: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         if let tabBarController = self.tabBarController as? TabBarController {
             let user = tabBarController.user
             configure(with: user)
         }
-        // Do any additional setup after loading the view.
     }
     
     

@@ -7,9 +7,7 @@ class LikedViewController: UIViewController {
     var user: User?
     var dataSource: UICollectionViewDiffableDataSource<Int, Book>!
     private let likedBooksManager = LikedBooksManager.shared
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
@@ -19,7 +17,6 @@ class LikedViewController: UIViewController {
         self.user = user
         updateDataSource()
         NotificationCenter.default.addObserver(self, selector: #selector(updateDataSource), name: .likedBooksUpdated, object: nil)
-
     }
     
     deinit {
@@ -28,47 +25,36 @@ class LikedViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         updateDataSource()
     }
     
     @objc func updateDataSource() {
-            guard let user = user else { return }
-            let likedBooks = likedBooksManager.getLikedBooks(user: user)
-            
-            var snapshot = NSDiffableDataSourceSnapshot<Int, Book>()
-            snapshot.appendSections([0])
-            snapshot.appendItems(likedBooks)
-            dataSource.apply(snapshot, animatingDifferences: true)
+        guard let user = user else { return }
+        let likedBooks = likedBooksManager.getLikedBooks(user: user)
+        var snapshot = NSDiffableDataSourceSnapshot<Int, Book>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(likedBooks)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
     
-    
     func configureCollectionView() {
-            likedCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-            
-            dataSource = UICollectionViewDiffableDataSource<Int, Book>(collectionView: likedCollectionView) { collectionView, indexPath, book in
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LikedCollectionViewCell", for: indexPath) as? LikedCollectionViewCell else {
-                    fatalError("Cannot create new cell")
-                }
-                cell.configure(with: book)
-                
-                return cell
+        likedCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        dataSource = UICollectionViewDiffableDataSource<Int, Book>(collectionView: likedCollectionView) { collectionView, indexPath, book in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LikedCollectionViewCell", for: indexPath) as? LikedCollectionViewCell else {
+                fatalError("Cannot create new cell")
             }
-            
-            likedCollectionView.dataSource = dataSource
-            likedCollectionView.delegate = self
+            cell.configure(with: book)
+            return cell
         }
-    
+        likedCollectionView.dataSource = dataSource
+        likedCollectionView.delegate = self
+    }
 }
 
 extension LikedViewController: UICollectionViewDelegateFlowLayout {
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 358, height: 159)
     }
-
-    
 }
 
 extension Notification.Name {

@@ -44,24 +44,20 @@ class LibraryTableViewCell: UITableViewCell {
     
     
     @IBAction func heartButtonTapped(_ sender: UIButton) {
-        print(1)
         guard let book = book, let user = user else { return }
         if likedBooksManager.isBookLiked(user: user, book: book) {
-            print(2)
             heartButton.tintColor = .gray
             likedBooksManager.removeLikedBook(user: user, book: book)
         } else {
-            print(3)
             likedBooksManager.addLikedBook(user: user, book: book)
             heartButton.tintColor = .red
         }
         
-        // Отправляем уведомление
         NotificationCenter.default.post(name: .likedBooksUpdated, object: nil)
     }
     
     @objc func handleLikedBooksUpdated() {
             guard let book = book, let user = user else { return }
             configureButton(book: book, user: user)
-        }
+    }
 }

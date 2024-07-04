@@ -18,14 +18,12 @@ class LikedBooksManager {
     
     func getLikedBooks(user: User) -> [Book] {
         return likedBooksByUser[user.login] ?? []
-        
     }
     
     func addLikedBook(user: User, book: Book) {
         if likedBooksByUser[user.login] == nil {
             likedBooksByUser[user.login] = [book]
         }
-        
         if !likedBooksByUser[user.login]!.contains(book) {
             likedBooksByUser[user.login]?.append(book)
             saveLikedBooks()
@@ -37,14 +35,13 @@ class LikedBooksManager {
     }
     
     func removeLikedBook(user: User, book: Book) {
-        if var likedBooks = likedBooksByUser[user.login] {
-            if let index = likedBooks.firstIndex(of: book) {
-                likedBooks.remove(at: index)
-                likedBooksByUser[user.login] = likedBooks
-            }
-        }
+        guard var likedBooks = likedBooksByUser[user.login],
+              let index = likedBooks.firstIndex(of: book) else { return }
+        likedBooks.remove(at: index)
+        likedBooksByUser[user.login] = likedBooks
         saveLikedBooks()
     }
+    
     private func saveLikedBooks() {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(likedBooksByUser) {
@@ -53,11 +50,8 @@ class LikedBooksManager {
     }
     
     private func loadLikedBooks() {
-        if let savedData = UserDefaults.standard.data(forKey: userDefaultsKey) {
-            let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode([String: [Book]].self, from: savedData) {
-                likedBooksByUser = decoded
-            }
-        }
+        guard let savedData = UserDefaults.standard.data(forKey: userDefaultsKey),
+              let decoded = try? JSONDecoder().decode([String: [Book]].self, from: savedData) else { return }
+        likedBooksByUser = decoded
     }
 }

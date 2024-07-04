@@ -8,7 +8,6 @@ class LibraryViewController: UIViewController {
     var dataSource = BooksManager.shared.getBooks()
     var user: User?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -18,7 +17,6 @@ class LibraryViewController: UIViewController {
         self.user = tabBarController.user
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
             segue.identifier == "showDetailedInfoBook",
@@ -26,12 +24,10 @@ class LibraryViewController: UIViewController {
         tabBarController.book = book
         tabBarController.user = user
     }
-    
-    
 }
 
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
-    
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataSource.count
     }
@@ -46,11 +42,8 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         170
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = dataSource[indexPath.row]
         performSegue(withIdentifier: "showDetailedInfoBook", sender: book)
     }
-    
-    
 }
