@@ -7,15 +7,13 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     private let authManager = AuthManager.shared
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        guard 
+        guard
             segue.identifier == "goInside",
             let tabBarController = segue.destination as? TabBarController, let user = sender as? User else { return }
         tabBarController.user = user
@@ -23,9 +21,7 @@ class AuthViewController: UIViewController {
     
     @IBAction func signInButtonTapped(_ sender: Any) {
         guard let login = loginTextField.text, let password = passwordTextField.text else { return }
-                
         if let user = authManager.LogInUser(login: login, pass: password) {
-
             loginTextField.text = ""
             passwordTextField.text = ""
             performSegue(withIdentifier: "goInside", sender: user)

@@ -7,29 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAC1DB832C33378600961E4F /* Скринкаст in Resources */ = {isa = PBXBuildFile; fileRef = AAC1DB822C33378600961E4F /* Скринкаст */; };
+
+		AA34510A2C34061700FF5ABB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3451092C34061600FF5ABB /* TabBarController.swift */; };
+		AA9D37482C340B6000FAE0D1 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D37472C340B6000FAE0D1 /* LibraryViewController.swift */; };
+		AA9D374A2C340B6E00FAE0D1 /* LikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D37492C340B6E00FAE0D1 /* LikedViewController.swift */; };
+		AA9D374D2C340EBA00FAE0D1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D374C2C340EBA00FAE0D1 /* Book.swift */; };
+		AA9D374F2C340F9800FAE0D1 /* BooksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D374E2C340F9800FAE0D1 /* BooksManager.swift */; };
+		AA9D37512C34184800FAE0D1 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D37502C34184800FAE0D1 /* LibraryTableViewCell.swift */; };
+		AA9D37572C3437D300FAE0D1 /* DetailedInfoBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D37562C3437D300FAE0D1 /* DetailedInfoBookViewController.swift */; };
+		AA9D37592C3445E100FAE0D1 /* LikedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D37582C3445E100FAE0D1 /* LikedCollectionViewCell.swift */; };
+		AA9D375E2C344CB500FAE0D1 /* LikedBooksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D375D2C344CB500FAE0D1 /* LikedBooksManager.swift */; };
+		AA9D37602C347C4D00FAE0D1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D375F2C347C4D00FAE0D1 /* AuthManager.swift */; };
+		AA9D37622C347CA600FAE0D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D37612C347CA600FAE0D1 /* SceneDelegate.swift */; };
+		AA9D37882C347FDD00FAE0D1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA9D37872C347FDD00FAE0D1 /* Info.plist */; };
+		AA9D378B2C34800B00FAE0D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9D37892C34800B00FAE0D1 /* LaunchScreen.storyboard */; };
 		AAEC01F22C32CB08004415F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC01F12C32CB08004415F1 /* AppDelegate.swift */; };
-		AAEC01F42C32CB08004415F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC01F32C32CB08004415F1 /* SceneDelegate.swift */; };
 		AAEC01F62C32CB08004415F1 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC01F52C32CB08004415F1 /* AuthViewController.swift */; };
 		AAEC01F92C32CB08004415F1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AAEC01F82C32CB08004415F1 /* Base */; };
 		AAEC01FB2C32CB0A004415F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEC01FA2C32CB0A004415F1 /* Assets.xcassets */; };
-		AAEC01FE2C32CB0A004415F1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AAEC01FD2C32CB0A004415F1 /* Base */; };
-		AAEC02072C32CB45004415F1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC02062C32CB45004415F1 /* AuthManager.swift */; };
+
 		AAEC020B2C32E05D004415F1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC020A2C32E05D004415F1 /* InfoViewController.swift */; };
 		AAEC020D2C32E437004415F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC020C2C32E437004415F1 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAC1DB822C33378600961E4F /* Скринкаст */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Скринкаст"; sourceTree = "<group>"; };
+
+		AA3451092C34061600FF5ABB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AA9D37472C340B6000FAE0D1 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		AA9D37492C340B6E00FAE0D1 /* LikedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedViewController.swift; sourceTree = "<group>"; };
+		AA9D374C2C340EBA00FAE0D1 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		AA9D374E2C340F9800FAE0D1 /* BooksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksManager.swift; sourceTree = "<group>"; };
+		AA9D37502C34184800FAE0D1 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		AA9D37562C3437D300FAE0D1 /* DetailedInfoBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInfoBookViewController.swift; sourceTree = "<group>"; };
+		AA9D37582C3445E100FAE0D1 /* LikedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA9D375D2C344CB500FAE0D1 /* LikedBooksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedBooksManager.swift; sourceTree = "<group>"; };
+		AA9D375F2C347C4D00FAE0D1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		AA9D37612C347CA600FAE0D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AA9D37872C347FDD00FAE0D1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Authentication1/Authentication1/Info.plist; sourceTree = "<group>"; };
+		AA9D378A2C34800B00FAE0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Authentication1/Authentication1/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAEC01EE2C32CB08004415F1 /* Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEC01F12C32CB08004415F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAEC01F32C32CB08004415F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AAEC01F52C32CB08004415F1 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		AAEC01F82C32CB08004415F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAEC01FA2C32CB0A004415F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AAEC01FD2C32CB0A004415F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AAEC01FF2C32CB0A004415F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAEC02062C32CB45004415F1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+
 		AAEC020A2C32E05D004415F1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AAEC020C2C32E437004415F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
+		AA9D375C2C344BDE00FAE0D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC020C2C32E437004415F1 /* User.swift */,
+				AA9D374C2C340EBA00FAE0D1 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+
 		AAEC01E52C32CB08004415F1 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +96,24 @@
 		AAEC01F02C32CB08004415F1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				AAEC02052C32CB37004415F1 /* Manager */,
-				AAEC020C2C32E437004415F1 /* User.swift */,
+
 				AAEC01F12C32CB08004415F1 /* AppDelegate.swift */,
-				AAEC01F32C32CB08004415F1 /* SceneDelegate.swift */,
+				AA9D37612C347CA600FAE0D1 /* SceneDelegate.swift */,
+				AA9D375C2C344BDE00FAE0D1 /* Model */,
+				AAEC02052C32CB37004415F1 /* Manager */,
+				AA9D37582C3445E100FAE0D1 /* LikedCollectionViewCell.swift */,
+				AA9D37562C3437D300FAE0D1 /* DetailedInfoBookViewController.swift */,
+				AA9D37502C34184800FAE0D1 /* LibraryTableViewCell.swift */,
 				AAEC01F52C32CB08004415F1 /* AuthViewController.swift */,
 				AAEC020A2C32E05D004415F1 /* InfoViewController.swift */,
+				AA3451092C34061600FF5ABB /* TabBarController.swift */,
+				AA9D37492C340B6E00FAE0D1 /* LikedViewController.swift */,
+				AA9D37472C340B6000FAE0D1 /* LibraryViewController.swift */,
 				AAEC01F72C32CB08004415F1 /* Main.storyboard */,
 				AAEC01FA2C32CB0A004415F1 /* Assets.xcassets */,
-				AAEC01FC2C32CB0A004415F1 /* LaunchScreen.storyboard */,
-				AAEC01FF2C32CB0A004415F1 /* Info.plist */,
-				AAC1DB822C33378600961E4F /* Скринкаст */,
+				AA9D37872C347FDD00FAE0D1 /* Info.plist */,
+				AA9D37892C34800B00FAE0D1 /* LaunchScreen.storyboard */,
+
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -82,7 +121,11 @@
 		AAEC02052C32CB37004415F1 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				AAEC02062C32CB45004415F1 /* AuthManager.swift */,
+
+				AA9D374E2C340F9800FAE0D1 /* BooksManager.swift */,
+				AA9D375D2C344CB500FAE0D1 /* LikedBooksManager.swift */,
+				AA9D375F2C347C4D00FAE0D1 /* AuthManager.swift */,
+
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -145,9 +188,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9D37882C347FDD00FAE0D1 /* Info.plist in Resources */,
 				AAEC01FB2C32CB0A004415F1 /* Assets.xcassets in Resources */,
-				AAEC01FE2C32CB0A004415F1 /* Base in Resources */,
-				AAC1DB832C33378600961E4F /* Скринкаст in Resources */,
+				AA9D378B2C34800B00FAE0D1 /* LaunchScreen.storyboard in Resources */,
 				AAEC01F92C32CB08004415F1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,10 +203,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAEC01F62C32CB08004415F1 /* AuthViewController.swift in Sources */,
-				AAEC02072C32CB45004415F1 /* AuthManager.swift in Sources */,
+				AA9D375E2C344CB500FAE0D1 /* LikedBooksManager.swift in Sources */,
+				AA9D374A2C340B6E00FAE0D1 /* LikedViewController.swift in Sources */,
+				AA9D374F2C340F9800FAE0D1 /* BooksManager.swift in Sources */,
+				AA9D37602C347C4D00FAE0D1 /* AuthManager.swift in Sources */,
+				AA9D37622C347CA600FAE0D1 /* SceneDelegate.swift in Sources */,
+				AA9D37482C340B6000FAE0D1 /* LibraryViewController.swift in Sources */,
+				AA9D37512C34184800FAE0D1 /* LibraryTableViewCell.swift in Sources */,
+				AA9D37592C3445E100FAE0D1 /* LikedCollectionViewCell.swift in Sources */,
 				AAEC020D2C32E437004415F1 /* User.swift in Sources */,
 				AAEC01F22C32CB08004415F1 /* AppDelegate.swift in Sources */,
-				AAEC01F42C32CB08004415F1 /* SceneDelegate.swift in Sources */,
+				AA34510A2C34061700FF5ABB /* TabBarController.swift in Sources */,
+				AA9D37572C3437D300FAE0D1 /* DetailedInfoBookViewController.swift in Sources */,
+				AA9D374D2C340EBA00FAE0D1 /* Book.swift in Sources */,
 				AAEC020B2C32E05D004415F1 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,20 +223,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AA9D37892C34800B00FAE0D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA9D378A2C34800B00FAE0D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		AAEC01F72C32CB08004415F1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AAEC01F82C32CB08004415F1 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AAEC01FC2C32CB0A004415F1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AAEC01FD2C32CB0A004415F1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -2,7 +2,6 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
-
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateOfBirthLabel: UILabel!
     @IBOutlet weak var mailLabel: UILabel!
@@ -10,14 +9,12 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var additionalTextLabel: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         if let tabBarController = self.tabBarController as? TabBarController {
             let user = tabBarController.user
             configure(with: user)
         }
-        // Do any additional setup after loading the view.
     }
     
     
@@ -29,7 +26,8 @@ class InfoViewController: UIViewController {
         additionalTextLabel.text = user?.bio
     }
     
-    @IBAction func sigOutButtonTapped(_ sender: Any) {
+    @IBAction func signOutButtonTappedd(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
+
 }
