@@ -2,6 +2,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateOfBirthLabel: UILabel!
     @IBOutlet weak var mailLabel: UILabel!
@@ -31,5 +32,4 @@ class InfoViewController: UIViewController {
     @IBAction func sigOutButtonTapped(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
-
 }

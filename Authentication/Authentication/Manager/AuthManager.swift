@@ -1,9 +1,3 @@
-//
-//  AuthManager.swift
-//  Authentication
-//
-//  Created by Павел Калинин on 02.07.2024.
-//
 
 import Foundation
 import UIKit
